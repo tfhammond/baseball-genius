@@ -1,0 +1,18 @@
+[project]
+name = "small-ball"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "django>=5.2,<5.3",
+    "django-environ>=0.12,<1",
+    "duckdb>=1,<2",
+    "psycopg[binary]>=3.2,<4",
+]
+
+[dependency-groups]
+ingest = [
+    "pybaseballstats",
+]
+
+[tool.uv.sources]
+pybaseballstats = { git = "https://github.com/nico671/pybaseballstats.git", rev = "4ae8b00d90a50ac933fb0b6f74b9938e1503e77d" }
